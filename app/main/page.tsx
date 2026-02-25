@@ -126,7 +126,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => void }) {
+function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -151,16 +151,6 @@ function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => v
               </a>
             </li>
           ))}
-          <li>
-            <button
-              type="button"
-              onClick={onToggleTheme}
-              className="btn-track rounded-full border border-border px-4 py-2 text-xs text-secondary transition-colors duration-200 hover:bg-subtle"
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            >
-              {theme === "dark" ? "Light Mode" : "Dark Mode"}
-            </button>
-          </li>
           <li>
             <a
               href="#contact"
@@ -189,19 +179,28 @@ function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => v
               {item.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={onToggleTheme}
-            className="mt-4 block w-full rounded-full border border-border bg-surface py-2.5 text-center text-sm text-secondary"
-          >
-            {theme === "dark" ? "Light Mode" : "Dark Mode"}
-          </button>
           <a href="#contact" className="mt-4 block rounded-full border border-primary py-2.5 text-center text-sm text-primary">
             Hire Me
           </a>
         </div>
       )}
     </header>
+  );
+}
+
+function FloatingThemeSwitch({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onToggleTheme}
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      className="fixed right-5 bottom-5 z-[120] inline-flex items-center gap-2 rounded-full border border-border bg-surface-raised px-4 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40"
+    >
+      <span className="text-base" aria-hidden="true">
+        {theme === "dark" ? "☀️" : "🌙"}
+      </span>
+      <span>{theme === "dark" ? "Light" : "Dark"}</span>
+    </button>
   );
 }
 
@@ -543,7 +542,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar theme={theme} onToggleTheme={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))} />
+      <Navbar />
       <main>
         <Hero />
         <GoldDivider />
@@ -555,6 +554,7 @@ export default function HomePage() {
         <GoldDivider />
         <Contact />
       </main>
+      <FloatingThemeSwitch theme={theme} onToggleTheme={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))} />
       <Footer />
     </>
   );
