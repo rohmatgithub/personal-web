@@ -8,25 +8,7 @@
  */
 
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
-
-/* ── Display font: editorial, luxurious ── */
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-/* ── Body font: clean, modern, readable ── */
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-  weight: ["300", "400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   title: "Rohmatullah — Full-Stack Developer",
@@ -57,9 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${dmSans.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

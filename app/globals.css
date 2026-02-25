@@ -5,6 +5,7 @@
    ============================================================ */
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ============================================================
    1. REFERENCE PALETTE (Raw values — don't use directly in UI)

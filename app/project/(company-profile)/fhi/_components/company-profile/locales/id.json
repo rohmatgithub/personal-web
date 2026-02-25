@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Profil Perusahaan"
+  },
+  "navbar": {
+    "brandSubtitle": "Federasi Hockey Indonesia",
+    "links": {
+      "about": "Tentang",
+      "visionMission": "Visi & Misi",
+      "achievements": "Prestasi",
+      "board": "Pengurus",
+      "blog": "Blog",
+      "contact": "Kontak",
+      "matches": "Pertandingan"
+    },
+    "registerAthlete": "Daftar Atlet",
+    "menuAria": "Menu",
+    "language": {
+      "switchToId": "Ganti bahasa ke Indonesia",
+      "switchToEn": "Ganti bahasa ke Inggris"
+    }
+  },
+  "hero": {
+    "badge": "Resmi • Terpercaya • Berprestasi",
+    "title": {
+      "federation": "Federasi",
+      "hockey": "Hockey",
+      "indonesia": "Indonesia"
+    },
+    "description": "Organisasi resmi yang menaungi Hockey Indoor dan Hockey Field di Indonesia, berkomitmen mengembangkan olahraga hockey dari akar rumput hingga level internasional.",
+    "ctaLearn": "Kenali FHI",
+    "ctaBlog": "Baca Blog",
+    "scroll": "scroll"
+  },
+  "stats": {
+    "memberProvinces": "Provinsi Anggota",
+    "registeredAthletes": "Atlet Terdaftar",
+    "activeClubs": "Klub Aktif",
+    "yearsEstablished": "Tahun Berdiri"
+  },
+  "about": {
+    "kicker": "Tentang Kami",
+    "titleLine1": "Satu Federasi,",
+    "titleLine2": "Dua Disiplin",
+    "titleLine3": "Hockey",
+    "paragraph1": "Federasi Hockey Indonesia (FHI) adalah organisasi nasional resmi yang menaungi olahraga Hockey Indoor dan Hockey Field di seluruh wilayah Indonesia. Didirikan sejak tahun 1999, FHI berkomitmen untuk memajukan olahraga hockey dari tingkat pembinaan usia dini hingga kompetisi internasional tertinggi.",
+    "paragraph2": "Sebagai anggota resmi Federasi Hockey Internasional (FIH) dan Federasi Hockey Asia (AHF), FHI bekerja keras memastikan standar kompetisi yang tinggi, pembinaan atlet yang sistematis, serta pengembangan infrastruktur yang memadai untuk mendukung prestasi atlet Indonesia di panggung internasional.",
+    "memberships": {
+      "fih": "Anggota FIH",
+      "ahf": "Anggota AHF",
+      "koni": "Anggota KONI"
+    },
+    "internationalMedals": "Medali Internasional"
+  },
+  "divisions": {
+    "kicker": "Cabang Olahraga",
+    "title": "Dua Disiplin Hockey",
+    "common": {
+      "playersPerTeam": "Pemain/Tim",
+      "minutesPerMatch": "Menit/Match",
+      "activeClubs": "Klub Aktif"
+    },
+    "indoor": {
+      "title": "Hockey Indoor",
+      "description": "Dimainkan di dalam ruangan dengan tim beranggotakan 6 orang, hockey indoor memadukan kecepatan, kelincahan, dan strategi di lapangan berukuran standar internasional."
+    },
+    "field": {
+      "title": "Hockey Field",
+      "description": "Dimainkan di lapangan rumput sintetis dengan tim 11 orang, hockey field adalah olahraga olimpiade yang membutuhkan daya tahan, teknik, dan koordinasi tim yang prima."
+    }
+  },
+  "visionMission": {
+    "kicker": "Arah & Tujuan",
+    "title": "Visi & Misi FHI",
+    "visionLabel": "VISI",
+    "visionText": "\"Menjadikan Indonesia sebagai kekuatan hockey terdepan di Asia Tenggara dan berdaya saing di tingkat Asia pada tahun 2030, dengan fondasi pembinaan atlet yang kuat dan infrastruktur berstandar internasional.\"",
+    "missions": {
+      "performance": {
+        "title": "Prestasi",
+        "text": "Meningkatkan prestasi timnas di seluruh jenjang kompetisi internasional melalui program pelatihan intensif dan profesional."
+      },
+      "development": {
+        "title": "Pembinaan",
+        "text": "Mengembangkan sistem pembinaan atlet usia dini yang terstruktur, merata, dan berkesinambungan di seluruh provinsi Indonesia."
+      },
+      "infrastructure": {
+        "title": "Infrastruktur",
+        "text": "Membangun dan meningkatkan fasilitas lapangan hockey berstandar internasional di berbagai wilayah Indonesia."
+      },
+      "education": {
+        "title": "Pendidikan",
+        "text": "Meningkatkan kompetensi pelatih, wasit, dan ofisial melalui program sertifikasi nasional dan internasional."
+      },
+      "partnership": {
+        "title": "Kemitraan",
+        "text": "Membangun kerjasama strategis dengan pemerintah, swasta, dan organisasi olahraga internasional demi kemajuan hockey."
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "text": "Menerapkan teknologi dan metode pelatihan modern untuk mendukung peningkatan performa atlet secara berkelanjutan."
+      }
+    }
+  },
+  "achievements": {
+    "kicker": "Hall of Champions",
+    "title": "Prestasi Terbaik",
+    "items": {
+      "seaGamesGold": {
+        "title": "Medali Emas SEA Games",
+        "event": "Hockey Indoor Putra – Bangkok"
+      },
+      "ahfBronze": {
+        "title": "Medali Perunggu AHF",
+        "event": "Hockey Field Putri – New Delhi"
+      },
+      "aseanChampion": {
+        "title": "Juara ASEAN Hockey",
+        "event": "Hockey Indoor Putri – Kuala Lumpur"
+      },
+      "seaGamesSilver": {
+        "title": "Medali Perak SEA Games",
+        "event": "Hockey Field Putra – Phnom Penh"
+      },
+      "asiaCupThird": {
+        "title": "Juara 3 Asia Cup",
+        "event": "Hockey Indoor Putra – Jakarta"
+      },
+      "ponGold": {
+        "title": "Medali Emas PON",
+        "event": "Hockey Field – Papua"
+      }
+    }
+  },
+  "board": {
+    "kicker": "Kepengurusan",
+    "title": "Pengurus FHI 2024–2028",
+    "items": {
+      "chairperson": "Ketua Umum",
+      "secretaryGeneral": "Sekretaris Jenderal",
+      "treasurer": "Bendahara Umum",
+      "headDevelopment": "Kabid Pembinaan",
+      "headInfrastructure": "Kabid Infrastruktur",
+      "headPartnership": "Kabid Kerjasama"
+    }
+  },
+  "blog": {
+    "kicker": "Berita & Artikel",
+    "title": "Blog FHI",
+    "description": "Ikuti perkembangan terkini dunia hockey Indonesia, dari berita pertandingan hingga program pembinaan atlet.",
+    "cta": "Lihat Semua Artikel"
+  },
+  "matchTeaser": {
+    "kicker": "Pertandingan",
+    "live": "LIVE",
+    "titlePrimary": "SKOR &",
+    "titleAccent": "JADWAL",
+    "viewAll": "Lihat Semua",
+    "openMatchCenter": "Buka Match Center",
+    "vs": "VS"
+  },
+  "matchCenter": {
+    "metaTitle": "Match Center · FHI",
+    "title": "Match Center",
+    "live": "Live",
+    "results": "Hasil",
+    "schedule": "Jadwal",
+    "standings": "Klasemen",
+    "standingsLabel": "KLASEMEN",
+    "group": "GRUP",
+    "all": "Semua",
+    "heroDescription": "Skor langsung, hasil pertandingan, jadwal, dan klasemen tim nasional & kejuaraan domestik.",
+    "lastUpdated": "Diperbarui",
+    "emptyLive": "Tidak ada pertandingan live saat ini.",
+    "emptyResults": "Belum ada hasil pertandingan.",
+    "emptySchedule": "Belum ada jadwal pertandingan.",
+    "vs": "VS",
+    "ft": "FT",
+    "indonesiaTeam": "Tim Indonesia",
+    "legendTop4": "Top 4 lolos ke semifinal",
+    "footerKicker": "Federasi Hoki Indonesia",
+    "footerTitle": "INGIN TAHU LEBIH LANJUT?",
+    "footerDescription": "Lihat profil lengkap, visi misi, dan prestasi FHI.",
+    "backToProfile": "Profil FHI",
+    "table": {
+      "team": "Tim"
+    }
+  },
+  "contact": {
+    "kicker": "Hubungi Kami",
+    "title": "Kontak FHI",
+    "info": {
+      "address": {
+        "label": "Alamat",
+        "value": "Gedung KONI Pusat Lt. 4, Jl. Pintu I Senayan, Jakarta Pusat 10270"
+      },
+      "phone": {
+        "label": "Telepon",
+        "value": "(021) 5784-3030"
+      },
+      "email": {
+        "label": "Email",
+        "value": "sekretariat@hockeyindonesia.or.id"
+      },
+      "website": {
+        "label": "Website",
+        "value": "www.hockeyindonesia.or.id"
+      }
+    },
+    "form": {
+      "title": "Kirim Pesan",
+      "fields": {
+        "fullName": {
+          "label": "Nama Lengkap",
+          "placeholder": "Nama Anda..."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "email@contoh.com"
+        },
+        "message": {
+          "label": "Pesan",
+          "placeholder": "Tulis pesan Anda..."
+        }
+      },
+      "submit": "Kirim Pesan",
+      "success": "Pesan terkirim! Kami akan segera menghubungi Anda."
+    }
+  },
+  "footer": {
+    "brand": {
+      "subtitle": "Federasi Hockey Indonesia",
+      "description": "Organisasi resmi hockey Indonesia, menaungi Hockey Indoor dan Hockey Field demi prestasi internasional."
+    },
+    "columns": {
+      "navigation": {
+        "title": "Navigasi",
+        "links": {
+          "about": "Tentang FHI",
+          "visionMission": "Visi & Misi",
+          "achievements": "Prestasi",
+          "board": "Pengurus",
+          "blog": "Blog"
+        }
+      },
+      "competitions": {
+        "title": "Kompetisi",
+        "links": {
+          "nationalLeague": "Liga Nasional",
+          "regionalChampionship": "Kejuaraan Daerah",
+          "juniorTournament": "Turnamen Junior",
+          "seaGames": "SEA Games",
+          "asianGames": "Asian Games"
+        }
+      },
+      "information": {
+        "title": "Informasi",
+        "links": {
+          "regulations": "Regulasi",
+          "athletes": "Daftar Atlet",
+          "schedule": "Jadwal Pertandingan",
+          "gallery": "Galeri Foto",
+          "contact": "Kontak"
+        }
+      }
+    },
+    "copyright": "© 2025 Federasi Hockey Indonesia. Hak cipta dilindungi undang-undang.",
+    "memberships": "Anggota FIH · AHF · KONI"
+  }
+}

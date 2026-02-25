@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Company Profile"
+  },
+  "navbar": {
+    "brandSubtitle": "Indonesian Hockey Federation",
+    "links": {
+      "about": "About",
+      "visionMission": "Vision & Mission",
+      "achievements": "Achievements",
+      "board": "Board",
+      "blog": "Blog",
+      "contact": "Contact",
+      "matches": "Matches"
+    },
+    "registerAthlete": "Register Athlete",
+    "menuAria": "Menu",
+    "language": {
+      "switchToId": "Switch language to Indonesian",
+      "switchToEn": "Switch language to English"
+    }
+  },
+  "hero": {
+    "badge": "Official • Trusted • High Performance",
+    "title": {
+      "federation": "Federation",
+      "hockey": "Hockey",
+      "indonesia": "Indonesia"
+    },
+    "description": "The official organization governing Indoor Hockey and Field Hockey in Indonesia, committed to developing hockey from grassroots to international level.",
+    "ctaLearn": "Discover FHI",
+    "ctaBlog": "Read Blog",
+    "scroll": "scroll"
+  },
+  "stats": {
+    "memberProvinces": "Member Provinces",
+    "registeredAthletes": "Registered Athletes",
+    "activeClubs": "Active Clubs",
+    "yearsEstablished": "Years Established"
+  },
+  "about": {
+    "kicker": "About Us",
+    "titleLine1": "One Federation,",
+    "titleLine2": "Two Disciplines",
+    "titleLine3": "Hockey",
+    "paragraph1": "The Indonesian Hockey Federation (FHI) is the official national organization overseeing Indoor Hockey and Field Hockey across Indonesia. Established in 1999, FHI is committed to advancing hockey from youth development to top-level international competitions.",
+    "paragraph2": "As an official member of the International Hockey Federation (FIH) and the Asian Hockey Federation (AHF), FHI works to ensure high competition standards, structured athlete development, and adequate infrastructure to support Indonesian athletes on the international stage.",
+    "memberships": {
+      "fih": "FIH Member",
+      "ahf": "AHF Member",
+      "koni": "KONI Member"
+    },
+    "internationalMedals": "International Medals"
+  },
+  "divisions": {
+    "kicker": "Sports Disciplines",
+    "title": "Two Hockey Disciplines",
+    "common": {
+      "playersPerTeam": "Players/Team",
+      "minutesPerMatch": "Minutes/Match",
+      "activeClubs": "Active Clubs"
+    },
+    "indoor": {
+      "title": "Indoor Hockey",
+      "description": "Played indoors with teams of 6 players, indoor hockey combines speed, agility, and tactics on an international-standard court."
+    },
+    "field": {
+      "title": "Field Hockey",
+      "description": "Played on synthetic turf with teams of 11 players, field hockey is an Olympic sport that demands endurance, technique, and strong team coordination."
+    }
+  },
+  "visionMission": {
+    "kicker": "Direction & Goals",
+    "title": "FHI Vision & Mission",
+    "visionLabel": "VISION",
+    "visionText": "\"To establish Indonesia as a leading hockey power in Southeast Asia and competitive at the Asian level by 2030, with strong athlete development foundations and international-standard infrastructure.\"",
+    "missions": {
+      "performance": {
+        "title": "Performance",
+        "text": "Improve national team performance across all levels of international competition through intensive and professional training programs."
+      },
+      "development": {
+        "title": "Development",
+        "text": "Build a structured, inclusive, and sustainable youth athlete development system across all provinces in Indonesia."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "text": "Build and upgrade hockey facilities to international standards in various regions of Indonesia."
+      },
+      "education": {
+        "title": "Education",
+        "text": "Enhance the competencies of coaches, referees, and officials through national and international certification programs."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "text": "Develop strategic partnerships with government, private sector, and international sports organizations to advance hockey."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Apply modern technology and training methods to continuously improve athlete performance."
+      }
+    }
+  },
+  "achievements": {
+    "kicker": "Hall of Champions",
+    "title": "Top Achievements",
+    "items": {
+      "seaGamesGold": {
+        "title": "SEA Games Gold Medal",
+        "event": "Men's Indoor Hockey – Bangkok"
+      },
+      "ahfBronze": {
+        "title": "AHF Bronze Medal",
+        "event": "Women's Field Hockey – New Delhi"
+      },
+      "aseanChampion": {
+        "title": "ASEAN Hockey Champion",
+        "event": "Women's Indoor Hockey – Kuala Lumpur"
+      },
+      "seaGamesSilver": {
+        "title": "SEA Games Silver Medal",
+        "event": "Men's Field Hockey – Phnom Penh"
+      },
+      "asiaCupThird": {
+        "title": "Asia Cup 3rd Place",
+        "event": "Men's Indoor Hockey – Jakarta"
+      },
+      "ponGold": {
+        "title": "PON Gold Medal",
+        "event": "Field Hockey – Papua"
+      }
+    }
+  },
+  "board": {
+    "kicker": "Leadership",
+    "title": "FHI Board 2024–2028",
+    "items": {
+      "chairperson": "Chairperson",
+      "secretaryGeneral": "Secretary General",
+      "treasurer": "Treasurer",
+      "headDevelopment": "Head of Development",
+      "headInfrastructure": "Head of Infrastructure",
+      "headPartnership": "Head of Partnerships"
+    }
+  },
+  "blog": {
+    "kicker": "News & Articles",
+    "title": "FHI Blog",
+    "description": "Follow the latest updates in Indonesian hockey, from match news to athlete development programs.",
+    "cta": "View All Articles"
+  },
+  "matchTeaser": {
+    "kicker": "Matches",
+    "live": "LIVE",
+    "titlePrimary": "SCORES &",
+    "titleAccent": "SCHEDULE",
+    "viewAll": "View All",
+    "openMatchCenter": "Open Match Center",
+    "vs": "VS"
+  },
+  "matchCenter": {
+    "metaTitle": "Match Center · FHI",
+    "title": "Match Center",
+    "live": "Live",
+    "results": "Results",
+    "schedule": "Schedule",
+    "standings": "Standings",
+    "standingsLabel": "STANDINGS",
+    "group": "GROUP",
+    "all": "All",
+    "heroDescription": "Live scores, match results, fixtures, and standings for national teams & domestic competitions.",
+    "lastUpdated": "Updated",
+    "emptyLive": "No live matches at the moment.",
+    "emptyResults": "No match results yet.",
+    "emptySchedule": "No upcoming matches yet.",
+    "vs": "VS",
+    "ft": "FT",
+    "indonesiaTeam": "Indonesia Team",
+    "legendTop4": "Top 4 qualify for semifinals",
+    "footerKicker": "Indonesian Hockey Federation",
+    "footerTitle": "WANT TO KNOW MORE?",
+    "footerDescription": "See complete profile, vision mission, and FHI achievements.",
+    "backToProfile": "FHI Profile",
+    "table": {
+      "team": "Team"
+    }
+  },
+  "contact": {
+    "kicker": "Contact Us",
+    "title": "FHI Contact",
+    "info": {
+      "address": {
+        "label": "Address",
+        "value": "KONI Central Building 4th Floor, Jl. Pintu I Senayan, Central Jakarta 10270"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "(021) 5784-3030"
+      },
+      "email": {
+        "label": "Email",
+        "value": "sekretariat@hockeyindonesia.or.id"
+      },
+      "website": {
+        "label": "Website",
+        "value": "www.hockeyindonesia.or.id"
+      }
+    },
+    "form": {
+      "title": "Send Message",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Your name..."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "email@example.com"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Write your message..."
+        }
+      },
+      "submit": "Send Message",
+      "success": "Message sent! We will contact you soon."
+    }
+  },
+  "footer": {
+    "brand": {
+      "subtitle": "Indonesian Hockey Federation",
+      "description": "The official hockey organization in Indonesia, governing Indoor Hockey and Field Hockey to achieve international excellence."
+    },
+    "columns": {
+      "navigation": {
+        "title": "Navigation",
+        "links": {
+          "about": "About FHI",
+          "visionMission": "Vision & Mission",
+          "achievements": "Achievements",
+          "board": "Board",
+          "blog": "Blog"
+        }
+      },
+      "competitions": {
+        "title": "Competitions",
+        "links": {
+          "nationalLeague": "National League",
+          "regionalChampionship": "Regional Championship",
+          "juniorTournament": "Junior Tournament",
+          "seaGames": "SEA Games",
+          "asianGames": "Asian Games"
+        }
+      },
+      "information": {
+        "title": "Information",
+        "links": {
+          "regulations": "Regulations",
+          "athletes": "Athlete Directory",
+          "schedule": "Match Schedule",
+          "gallery": "Photo Gallery",
+          "contact": "Contact"
+        }
+      }
+    },
+    "copyright": "© 2025 Indonesian Hockey Federation. All rights reserved.",
+    "memberships": "FIH · AHF · KONI Member"
+  }
+}

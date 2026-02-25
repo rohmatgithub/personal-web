@@ -1,0 +1,131 @@
+.company-theme {
+  --primary-main: #c01020;
+  --primary-hover: #e8112d;
+  --primary-light: #fff0f0;
+  --primary-dark: #8b0000;
+
+  --secondary-main: #071840;
+  --secondary-light: #1e3f80;
+  --secondary-dark: #071840;
+
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #fff0f0;
+  --hero-bg: linear-gradient(135deg, #fafafa 0%, #f3f7ff 40%, #e8f0ff 70%, #fff1f3 100%);
+
+  --text-primary: #0f1f3d;
+  --text-secondary: #3d5a8a;
+  --text-disabled: #9ca3af;
+  --text-on-primary: #080e1a;
+  --text-on-primary-85: color-mix(in srgb, var(--text-on-primary) 85%, transparent);
+  --text-on-primary-80: color-mix(in srgb, var(--text-on-primary) 80%, transparent);
+  --text-on-primary-70: color-mix(in srgb, var(--text-on-primary) 70%, transparent);
+  --text-on-primary-65: color-mix(in srgb, var(--text-on-primary) 65%, transparent);
+  --text-on-primary-60: color-mix(in srgb, var(--text-on-primary) 60%, transparent);
+  --text-on-primary-55: color-mix(in srgb, var(--text-on-primary) 55%, transparent);
+  --text-on-primary-25: color-mix(in srgb, var(--text-on-primary) 25%, transparent);
+  --bg-primary-06: color-mix(in srgb, var(--bg-primary) 6%, transparent);
+  --bg-primary-08: color-mix(in srgb, var(--bg-primary) 8%, transparent);
+  --bg-primary-55: color-mix(in srgb, var(--bg-primary) 55%, transparent);
+  --primary-light-50: color-mix(in srgb, var(--primary-light) 50%, transparent);
+  --primary-light-60: color-mix(in srgb, var(--primary-light) 60%, transparent);
+  --error-50: color-mix(in srgb, var(--error) 50%, transparent);
+
+  --border-main: #fbc9ce;
+  --border-light: #fde8ea;
+  --border-dark: #f0808a;
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --error: #dc2626;
+  --info: #c8960c;
+
+  --svg-field: rgba(255, 255, 255, 0.05);
+
+  --shadow-sm:
+    0 1px 3px rgba(192, 16, 32, 0.07), 0 1px 2px rgba(15, 31, 61, 0.05);
+  --shadow-md:
+    0 4px 12px rgba(192, 16, 32, 0.1), 0 2px 6px rgba(15, 31, 61, 0.07);
+  --shadow-lg:
+    0 12px 28px rgba(192, 16, 32, 0.13), 0 4px 10px rgba(15, 31, 61, 0.09);
+  --shadow-focus: 0 0 0 3px rgba(192, 16, 32, 0.28);
+}
+
+.dark .company-theme {
+  --primary-main: #e8112d;
+  --primary-hover: #ff3347;
+  --primary-light: #2a0508;
+  --primary-dark: #ffb3ba;
+
+  --secondary-main: #eaefef;
+  --secondary-light: #c5d6f0;
+  --secondary-dark: #e8eded;
+
+  --bg-primary: #080e1a;
+  --bg-secondary: #0f1c30;
+  --bg-tertiary: #071840;
+  --hero-bg: linear-gradient(135deg, #080e1a 0%, #0f1c30 40%, #0f2a5e 70%, #1a0205 100%);
+
+  --text-primary: #eef2f7;
+  --text-secondary: #8aaad4;
+  --text-disabled: #3d5068;
+  --text-on-primary: #ffffff;
+  --text-on-primary-85: color-mix(in srgb, var(--text-on-primary) 85%, transparent);
+  --text-on-primary-80: color-mix(in srgb, var(--text-on-primary) 80%, transparent);
+  --text-on-primary-70: color-mix(in srgb, var(--text-on-primary) 70%, transparent);
+  --text-on-primary-65: color-mix(in srgb, var(--text-on-primary) 65%, transparent);
+  --text-on-primary-60: color-mix(in srgb, var(--text-on-primary) 60%, transparent);
+  --text-on-primary-55: color-mix(in srgb, var(--text-on-primary) 55%, transparent);
+  --text-on-primary-25: color-mix(in srgb, var(--text-on-primary) 25%, transparent);
+  --bg-primary-06: color-mix(in srgb, var(--bg-primary) 6%, transparent);
+  --bg-primary-08: color-mix(in srgb, var(--bg-primary) 8%, transparent);
+  --bg-primary-55: color-mix(in srgb, var(--bg-primary) 55%, transparent);
+  --primary-light-50: color-mix(in srgb, var(--primary-light) 50%, transparent);
+  --primary-light-60: color-mix(in srgb, var(--primary-light) 60%, transparent);
+  --error-50: color-mix(in srgb, var(--error) 50%, transparent);
+
+  --border-main: #1e3050;
+  --border-light: #12203a;
+  --border-dark: #2e4870;
+
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --info: #f0c040;
+
+  --svg-field: rgb(251, 82, 82);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.55);
+  --shadow-lg:
+    0 16px 32px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(232, 17, 45, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(232, 17, 45, 0.3);
+}
+
+.company-theme {
+  font-family: "Barlow", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(230, 48, 18, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(230, 48, 18, 0);
+  }
+}
