@@ -149,6 +149,60 @@
     "description": "Ikuti perkembangan terkini dunia hockey Indonesia, dari berita pertandingan hingga program pembinaan atlet.",
     "cta": "Lihat Semua Artikel"
   },
+  "list": {
+    "featuredBadge": "Unggulan",
+    "readSuffix": "baca",
+    "readMore": "Baca Selengkapnya",
+    "readArticle": "Baca Artikel",
+    "filterAll": "Semua",
+    "heroKicker": "Berita & Artikel Terbaru",
+    "heroTitleLine2": "Hockey",
+    "heroTitleLine3": "Indonesia",
+    "heroDescription": "Ikuti perkembangan terkini dunia hockey Indonesia - prestasi, kompetisi, pembinaan, dan banyak lagi.",
+    "searchPlaceholder": "Cari artikel...",
+    "featuredSectionTitle": "Artikel Unggulan",
+    "searchResultTitle": "Hasil \"{{query}}\"",
+    "allArticlesTitle": "Semua Artikel",
+    "writeArticle": "Tulis Artikel",
+    "emptyTitle": "Tidak Ada Artikel",
+    "emptyDescription": "Coba ubah filter atau kata kunci pencarian Anda.",
+    "resetFilter": "Reset Filter",
+    "footerBrand": "Federasi Hockey Indonesia",
+    "footerCopyright": "© 2025 FHI · Blog Resmi",
+    "backHome": "Kembali ke Beranda"
+  },
+  "detail": {
+    "readSuffix": "baca",
+    "breadcrumb": {
+      "home": "Beranda",
+      "blog": "Blog"
+    },
+    "featuredBadge": "Unggulan",
+    "tagsLabel": "Tags:",
+    "shareArticle": "Bagikan Artikel:",
+    "share": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "whatsapp": "WhatsApp"
+    },
+    "shareTo": "Bagikan ke {{platform}}",
+    "copied": "Disalin!",
+    "copyLink": "Salin Link",
+    "authorBio": "Kontributor tetap FHI yang fokus meliput perkembangan hockey Indonesia di seluruh tingkatan kompetisi, mulai dari liga daerah hingga turnamen internasional.",
+    "aboutFhi": {
+      "title": "Tentang FHI",
+      "description": "Federasi Hockey Indonesia adalah organisasi resmi yang menaungi Hockey Indoor dan Field di seluruh Indonesia sejak 1999.",
+      "cta": "Pelajari Lebih Lanjut"
+    },
+    "readProgress": "PROGRES MEMBACA",
+    "otherArticles": "Artikel Lainnya",
+    "viewAllBlog": "Lihat Semua Blog",
+    "relatedArticles": "Artikel Terkait",
+    "footerBrand": "Federasi Hockey Indonesia",
+    "footerCopyright": "© 2025 FHI · Blog Resmi",
+    "allArticles": "Semua Artikel",
+    "home": "Beranda"
+  },
   "matchTeaser": {
     "kicker": "Pertandingan",
     "live": "LIVE",

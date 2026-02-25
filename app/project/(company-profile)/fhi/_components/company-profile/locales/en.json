@@ -149,6 +149,60 @@
     "description": "Follow the latest updates in Indonesian hockey, from match news to athlete development programs.",
     "cta": "View All Articles"
   },
+  "list": {
+    "featuredBadge": "Featured",
+    "readSuffix": "read",
+    "readMore": "Read More",
+    "readArticle": "Read Article",
+    "filterAll": "All",
+    "heroKicker": "Latest News & Articles",
+    "heroTitleLine2": "Hockey",
+    "heroTitleLine3": "Indonesia",
+    "heroDescription": "Follow the latest developments in Indonesian hockey - achievements, competitions, development programs, and more.",
+    "searchPlaceholder": "Search articles...",
+    "featuredSectionTitle": "Featured Articles",
+    "searchResultTitle": "Results \"{{query}}\"",
+    "allArticlesTitle": "All Articles",
+    "writeArticle": "Write Article",
+    "emptyTitle": "No Articles",
+    "emptyDescription": "Try changing your filter or search keyword.",
+    "resetFilter": "Reset Filter",
+    "footerBrand": "Indonesian Hockey Federation",
+    "footerCopyright": "© 2025 FHI · Official Blog",
+    "backHome": "Back to Home"
+  },
+  "detail": {
+    "readSuffix": "read",
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "featuredBadge": "Featured",
+    "tagsLabel": "Tags:",
+    "shareArticle": "Share Article:",
+    "share": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "whatsapp": "WhatsApp"
+    },
+    "shareTo": "Share to {{platform}}",
+    "copied": "Copied!",
+    "copyLink": "Copy Link",
+    "authorBio": "A regular FHI contributor focused on covering the development of Indonesian hockey across all competition levels, from regional leagues to international tournaments.",
+    "aboutFhi": {
+      "title": "About FHI",
+      "description": "The Indonesian Hockey Federation is the official organization governing Indoor and Field Hockey across Indonesia since 1999.",
+      "cta": "Learn More"
+    },
+    "readProgress": "READING PROGRESS",
+    "otherArticles": "Other Articles",
+    "viewAllBlog": "View All Blog",
+    "relatedArticles": "Related Articles",
+    "footerBrand": "Indonesian Hockey Federation",
+    "footerCopyright": "© 2025 FHI · Official Blog",
+    "allArticles": "All Articles",
+    "home": "Home"
+  },
   "matchTeaser": {
     "kicker": "Matches",
     "live": "LIVE",

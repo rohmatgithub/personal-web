@@ -17,8 +17,7 @@ import {
 import { MatchTeaserSection } from "./MatchTeaserSection";
 import CompanyNavbar from "./CompanyNavbar";
 import ThemeSwitchButton from "./ThemeSwitchButton";
-import { I18nProvider, useTranslation } from "./i18n-context";
-import { ThemeProvider } from "./theme-context";
+import { useTranslation } from "./i18n-context";
 
 function useInView(threshold = 0.15) {
   const [node, setNode] = useState<HTMLDivElement | null>(null);
@@ -41,7 +40,7 @@ function useInView(threshold = 0.15) {
   return { observeRef: setNode, isVisible: inView };
 }
 
-function CompanyProfileContent() {
+export default function CompanyProfile() {
   const { t, i18n } = useTranslation("companyProfile");
   const heroSection = useInView(0.1);
   const aboutSection = useInView();
@@ -112,15 +111,5 @@ function CompanyProfileContent() {
       <FooterSection />
       <GlobalAnimations />
     </div>
-  );
-}
-
-export default function CompanyProfile() {
-  return (
-    <ThemeProvider>
-      <I18nProvider>
-        <CompanyProfileContent />
-      </I18nProvider>
-    </ThemeProvider>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "./i18n-context";
 import type { SectionInView } from "./types";
@@ -41,41 +42,41 @@ const fallbackTeaserMatches: TeaserMatch[] = [
     status: "live",
     stageType: "group_stage",
     stageName: "Group A",
-    homeTeam: "Indonesia",
-    awayTeam: "Malaysia",
+    homeTeam: "DKI Jakarta",
+    awayTeam: "Jawa Barat",
     homeImageUrl: "",
     awayImageUrl: "",
     homeScore: 2,
     awayScore: 1,
-    competition: "SEA Games Qualifier",
+    competition: "Kejurnas Hockey Putra 2026",
     period: "Q3 · 38:12",
   },
   {
     id: 2,
     status: "final",
-    stageType: "semifinal",
-    stageName: "Semifinal",
-    homeTeam: "Thailand",
-    awayTeam: "Indonesia",
+    stageType: "group_stage",
+    stageName: "Group A",
+    homeTeam: "Jawa Tengah",
+    awayTeam: "Jawa Timur",
     homeImageUrl: "",
     awayImageUrl: "",
     homeScore: 1,
-    awayScore: 3,
-    competition: "AHF Cup",
+    awayScore: 1,
+    competition: "Kejurnas Hockey Putra 2026",
   },
   {
     id: 3,
     status: "upcoming",
-    stageType: "final",
-    stageName: "Final",
-    homeTeam: "Indonesia",
-    awayTeam: "Vietnam",
+    stageType: "group_stage",
+    stageName: "Group B",
+    homeTeam: "Banten",
+    awayTeam: "DI Yogyakarta",
     homeImageUrl: "",
     awayImageUrl: "",
     homeScore: null,
     awayScore: null,
-    competition: "ASEAN Hockey Championship",
-    period: "20:00 WIB",
+    competition: "Kejurnas Hockey Putra 2026",
+    period: "10:00 WIB",
   },
 ];
 
@@ -211,14 +212,14 @@ export function MatchTeaserSection({ observeRef, isVisible }: SectionInView) {
               </span>
             </h2>
           </div>
-          <a
-            href="#pertandingan"
+          <Link
+            href="/project/fhi/match-center"
             className="shrink-0 inline-flex items-center gap-2 text-white/60 text-[12px] font-bold tracking-[0.08em] uppercase
               no-underline border border-white/20 px-5 py-2.5 rounded-lg
               hover:text-white hover:border-white/50 transition-all duration-200 self-start sm:self-auto"
           >
             {t("matchTeaser.viewAll")} <span aria-hidden>→</span>
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -367,8 +368,8 @@ export function MatchTeaserSection({ observeRef, isVisible }: SectionInView) {
           className={`flex justify-center transition-all duration-600 ease-in-out delay-[0.45s]
             ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          <a
-            href="#pertandingan"
+          <Link
+            href="/project/fhi/match-center"
             className="inline-flex items-center gap-3 bg-(--primary-main) text-white py-3.5 px-10 rounded-xl no-underline
               text-[13px] font-extrabold tracking-[0.08em] uppercase
               transition-all duration-200 hover:-translate-y-0.75 hover:bg-(--primary-hover)
@@ -378,7 +379,7 @@ export function MatchTeaserSection({ observeRef, isVisible }: SectionInView) {
             <span className="text-[16px]" aria-hidden>
               →
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

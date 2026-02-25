@@ -988,7 +988,7 @@ export function ContactSection({ observeRef, isVisible }: SectionInView) {
                   <input
                     type={field.type}
                     placeholder={field.placeholder}
-                    className="w-full py-3 px-4 rounded-2.5 border border-(--border-main) bg-(--bg-primary)
+                    className="w-full py-3 px-4 rounded-lg border border-(--border-main) bg-(--bg-primary)
                       text-(--text-primary) text-[15px] outline-none
                       transition-colors duration-200 focus:border-(--primary-main)"
                   />
@@ -1001,13 +1001,13 @@ export function ContactSection({ observeRef, isVisible }: SectionInView) {
                 <textarea
                   placeholder={t("contact.form.fields.message.placeholder")}
                   rows={4}
-                  className="w-full py-3 px-4 rounded-2.5 border border-(--border-main) bg-(--bg-primary)
+                  className="w-full py-3 px-4 rounded-lg border border-(--border-main) bg-(--bg-primary)
                     text-(--text-secondary) text-[15px] outline-none resize-y font-[Barlow,sans-serif]
                     transition-colors duration-200 focus:border-(--primary-main)"
                 />
               </div>
               <button
-                className="bg-(--primary-main) text-white p-3.5 rounded-2.5 border-none
+                className="bg-(--primary-main) text-white p-3.5 rounded-lg border-none
                   text-sm font-extrabold tracking-[0.08em] uppercase cursor-pointer
                   transition-all duration-200 hover:bg-(--primary-hover) hover:-translate-y-0.5
                   shadow-[0_4px_14px_rgba(192,16,32,0.35)]"
@@ -1040,7 +1040,7 @@ export function FooterSection() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <div
-                className="w-10 h-10 rounded-2.5 flex items-center justify-center text-[18px]
+                className="w-10 h-10 rounded-lg flex items-center justify-center text-[18px]
                 bg-[linear-gradient(135deg,var(--primary-main),var(--secondary-main))]"
               >
                 🏑

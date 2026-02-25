@@ -26,7 +26,7 @@ const baseNavItems: NavItem[] = [
   { key: "achievements", href: "#prestasi" },
   { key: "board", href: "#pengurus" },
   { key: "contact", href: "#kontak" },
-  { key: "blog", href: "#blog" },
+  { key: "blog", href: "/project/fhi/blog" },
   { key: "matches", href: "#pertandingan" },
 ];
 

@@ -18,7 +18,7 @@ type TranslationDict = Record<string, unknown>;
 type I18nContextValue = {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, variables?: Record<string, string | number>) => string;
 };
 
 const translations: Record<Language, TranslationDict> = { id, en };
@@ -30,6 +30,18 @@ function getByPath(dict: TranslationDict, key: string): unknown {
     if (!acc || typeof acc !== "object") return undefined;
     return (acc as Record<string, unknown>)[part];
   }, dict);
+}
+
+function interpolate(
+  template: string,
+  variables?: Record<string, string | number>,
+): string {
+  if (!variables) return template;
+
+  return template.replace(/\{\{\s*(\w+)\s*\}\}/g, (_, key: string) => {
+    const value = variables[key];
+    return value === undefined ? `{{${key}}}` : String(value);
+  });
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
@@ -45,9 +57,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, [language]);
 
   const value = useMemo<I18nContextValue>(() => {
-    const t = (key: string) => {
+    const t = (key: string, variables?: Record<string, string | number>) => {
       const translated = getByPath(translations[language], key);
-      return typeof translated === "string" ? translated : key;
+      if (typeof translated !== "string") return key;
+      return interpolate(translated, variables);
     };
 
     return {
@@ -61,14 +74,20 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 }
 
 export function useTranslation(namespace?: string) {
-  void namespace;
   const context = useContext(I18nContext);
   if (!context) {
     throw new Error("useTranslation must be used within I18nProvider");
   }
 
+  const t = (key: string, variables?: Record<string, string | number>) => {
+    const scopedKey = namespace ? `${namespace}.${key}` : key;
+    const scopedValue = context.t(scopedKey, variables);
+    if (scopedValue !== scopedKey) return scopedValue;
+    return context.t(key, variables);
+  };
+
   return {
-    t: context.t,
+    t,
     i18n: {
       language: context.language,
       changeLanguage: async (language: Language) => {
