@@ -1,0 +1,121 @@
+{
+  "MainPage": {
+    "nav": {
+      "about": "About",
+      "services": "Services",
+      "work": "Projects",
+      "contact": "Contact",
+      "hireMe": "Hire Me",
+      "toggleMenuAria": "Toggle menu"
+    },
+    "themeSwitch": {
+      "switchThemeAria": "Toggle theme",
+      "buttonLabel": "Theme"
+    },
+    "hero": {
+      "available": "Available for Projects",
+      "titleLine1": "Crafting Digital",
+      "titleLine2": "Experiences",
+      "titleLine3": "That Matter",
+      "introPrefix": "I'm",
+      "introSuffix": "- a full-stack developer specialising in web, desktop, and mobile applications. I turn complex requirements into elegant, high-performance software.",
+      "ctaWork": "View My Work",
+      "ctaTalk": "Let's Talk",
+      "scrollHint": "SCROLL TO EXPLORE",
+      "stats": {
+        "experience": "Years Experience",
+        "projects": "Projects Delivered",
+        "satisfaction": "Client Satisfaction",
+        "platforms": "Platforms Mastered"
+      }
+    },
+    "about": {
+      "sectionLabel": "About Me",
+      "role": "Full-Stack Developer",
+      "titleLine1": "Precision-built software for",
+      "titleLine2": "discerning clients",
+      "paragraph1": "With over 5 years of hands-on experience, I specialise in building software that's not just functional but exceptional. I work closely with clients to understand the business context behind every feature, ensuring the end result is always purposeful.",
+      "paragraph2": "My practice spans the full stack: from database architecture to pixel-perfect interfaces. Whether it's a complex enterprise web app, a cross-platform desktop tool, or a polished mobile experience, I bring the same level of craftsmanship to every project."
+    },
+    "services": {
+      "sectionLabel": "What I Do",
+      "titleLine1": "Services built around",
+      "titleLine2": "your vision",
+      "items": {
+        "web": {
+          "title": "Web Application",
+          "desc": "Scalable, high-performance web apps built with modern frameworks. From complex SaaS dashboards to customer-facing portals, designed to convert and engineered to scale."
+        },
+        "desktop": {
+          "title": "Desktop Application",
+          "desc": "Cross-platform desktop solutions that feel native on Windows, macOS, and Linux. Powerful offline capabilities with a polished, intuitive interface."
+        },
+        "mobile": {
+          "title": "Mobile Application",
+          "desc": "Native-quality mobile experiences for iOS and Android. Smooth animations, responsive design, and deep platform integration your users will love."
+        },
+        "uiux": {
+          "title": "UI/UX Design",
+          "desc": "Thoughtful design systems and pixel-perfect interfaces that balance beauty with usability. Every interaction is intentional, every detail considered."
+        }
+      }
+    },
+    "portfolio": {
+      "sectionLabel": "Selected Work",
+      "titleLine1": "Projects I'm",
+      "titleLine2": "proud of",
+      "startProject": "Start a new project",
+      "items": {
+        "nexora": {
+          "title": "Nexora Dashboard",
+          "category": "Web Application",
+          "desc": "Enterprise analytics dashboard with real-time data visualization, role-based access, and multi-tenant architecture for a SaaS fintech startup."
+        },
+        "fieldops": {
+          "title": "FieldOps Mobile",
+          "category": "Mobile Application",
+          "desc": "Offline-first field management app for logistics teams. GPS tracking, task assignment, and photo reporting with seamless sync when back online."
+        },
+        "vaultr": {
+          "title": "Vaultr Desktop",
+          "category": "Desktop Application",
+          "desc": "Secure local password and secrets manager with end-to-end encryption, auto-fill integration, and a minimal, distraction-free interface."
+        },
+        "artisane": {
+          "title": "Artisane Storefront",
+          "category": "Web Application",
+          "desc": "Premium e-commerce platform for a luxury goods brand. Custom CMS, multi-currency checkout, and editorial-style product presentation."
+        }
+      }
+    },
+    "contact": {
+      "sectionLabel": "Get In Touch",
+      "titleLine1": "Ready to build something",
+      "titleLine2": "remarkable?",
+      "subtitle": "Tell me about your project. I'll get back to you within 24 hours.",
+      "form": {
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "Email address",
+        "projectPlaceholder": "Project type (Web / Desktop / Mobile)",
+        "messagePlaceholder": "Tell me about your project, goals, and timeline...",
+        "sendButton": "Send Message ->",
+        "sentButton": "Message Sent ✓"
+      },
+      "items": {
+        "emailLabel": "Email",
+        "linkedinLabel": "LinkedIn",
+        "githubLabel": "GitHub"
+      },
+      "availabilityLabel": "AVAILABLE",
+      "availabilityDesc": "Currently accepting new projects. Typical response time within 24 hours."
+    },
+    "footer": {
+      "craftedWithCare": "Crafted with care.",
+      "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "MainPage": {
+    "nav": {
+      "about": "Tentang",
+      "services": "Layanan",
+      "work": "Portofolio",
+      "contact": "Kontak",
+      "hireMe": "Hubungi Saya",
+      "toggleMenuAria": "Buka menu"
+    },
+    "themeSwitch": {
+      "switchThemeAria": "Ganti tema",
+      "buttonLabel": "Tema"
+    },
+    "hero": {
+      "available": "Tersedia untuk Proyek",
+      "titleLine1": "Menciptakan Pengalaman",
+      "titleLine2": "Digital",
+      "titleLine3": "Yang Bermakna",
+      "introPrefix": "Saya",
+      "introSuffix": "- full-stack developer yang berfokus pada aplikasi web, desktop, dan mobile. Saya mengubah kebutuhan kompleks menjadi software yang elegan dan berkinerja tinggi.",
+      "ctaWork": "Lihat Karya Saya",
+      "ctaTalk": "Mari Diskusi",
+      "scrollHint": "GULIR UNTUK MENJELAJAH",
+      "stats": {
+        "experience": "Tahun Pengalaman",
+        "projects": "Proyek Selesai",
+        "satisfaction": "Kepuasan Klien",
+        "platforms": "Platform Dikuasai"
+      }
+    },
+    "about": {
+      "sectionLabel": "Tentang Saya",
+      "role": "Full-Stack Developer",
+      "titleLine1": "Software presisi untuk",
+      "titleLine2": "klien yang selektif",
+      "paragraph1": "Dengan pengalaman lebih dari 5 tahun, saya fokus membangun software yang tidak hanya berfungsi, tetapi juga unggul. Saya bekerja erat dengan klien untuk memahami konteks bisnis di balik setiap fitur agar hasil akhirnya selalu tepat guna.",
+      "paragraph2": "Praktik saya mencakup full stack: dari arsitektur database hingga antarmuka yang pixel-perfect. Baik itu aplikasi web enterprise yang kompleks, tools desktop lintas platform, maupun pengalaman mobile yang matang, saya membawa standar craftsmanship yang sama ke setiap proyek."
+    },
+    "services": {
+      "sectionLabel": "Yang Saya Kerjakan",
+      "titleLine1": "Layanan yang dibangun",
+      "titleLine2": "sesuai visi Anda",
+      "items": {
+        "web": {
+          "title": "Aplikasi Web",
+          "desc": "Aplikasi web yang scalable dan berperforma tinggi dengan framework modern. Dari dashboard SaaS kompleks hingga portal pelanggan, dirancang untuk konversi dan dibangun agar mudah berkembang."
+        },
+        "desktop": {
+          "title": "Aplikasi Desktop",
+          "desc": "Solusi desktop lintas platform yang terasa native di Windows, macOS, dan Linux. Kapabilitas offline yang kuat dengan antarmuka yang rapi dan intuitif."
+        },
+        "mobile": {
+          "title": "Aplikasi Mobile",
+          "desc": "Pengalaman mobile berkualitas native untuk iOS dan Android. Animasi halus, desain responsif, dan integrasi platform yang dalam dan disukai pengguna."
+        },
+        "uiux": {
+          "title": "Desain UI/UX",
+          "desc": "Design system yang matang dan antarmuka pixel-perfect yang menyeimbangkan estetika dan kegunaan. Setiap interaksi disengaja, setiap detail dipertimbangkan."
+        }
+      }
+    },
+    "portfolio": {
+      "sectionLabel": "Karya Pilihan",
+      "titleLine1": "Proyek yang",
+      "titleLine2": "saya banggakan",
+      "startProject": "Mulai proyek baru",
+      "items": {
+        "nexora": {
+          "title": "Nexora Dashboard",
+          "category": "Aplikasi Web",
+          "desc": "Dashboard analitik enterprise dengan visualisasi data real-time, kontrol akses berbasis peran, dan arsitektur multi-tenant untuk startup fintech SaaS."
+        },
+        "fieldops": {
+          "title": "FieldOps Mobile",
+          "category": "Aplikasi Mobile",
+          "desc": "Aplikasi manajemen lapangan offline-first untuk tim logistik. Pelacakan GPS, penugasan, dan laporan foto dengan sinkronisasi mulus saat kembali online."
+        },
+        "vaultr": {
+          "title": "Vaultr Desktop",
+          "category": "Aplikasi Desktop",
+          "desc": "Password dan secrets manager lokal yang aman dengan enkripsi end-to-end, integrasi auto-fill, dan antarmuka minimalis tanpa distraksi."
+        },
+        "artisane": {
+          "title": "Artisane Storefront",
+          "category": "Aplikasi Web",
+          "desc": "Platform e-commerce premium untuk brand barang mewah. CMS kustom, checkout multi-mata uang, dan presentasi produk bergaya editorial."
+        }
+      }
+    },
+    "contact": {
+      "sectionLabel": "Mari Terhubung",
+      "titleLine1": "Siap membangun sesuatu",
+      "titleLine2": "yang luar biasa?",
+      "subtitle": "Ceritakan kebutuhan proyek Anda. Saya akan merespons dalam 24 jam.",
+      "form": {
+        "namePlaceholder": "Nama Anda",
+        "emailPlaceholder": "Alamat email",
+        "projectPlaceholder": "Jenis proyek (Web / Desktop / Mobile)",
+        "messagePlaceholder": "Ceritakan proyek, tujuan, dan timeline Anda...",
+        "sendButton": "Kirim Pesan ->",
+        "sentButton": "Pesan Terkirim ✓"
+      },
+      "items": {
+        "emailLabel": "Email",
+        "linkedinLabel": "LinkedIn",
+        "githubLabel": "GitHub"
+      },
+      "availabilityLabel": "TERSEDIA",
+      "availabilityDesc": "Saat ini menerima proyek baru. Waktu respons biasanya dalam 24 jam."
+    },
+    "footer": {
+      "craftedWithCare": "Dibuat dengan sepenuh hati.",
+      "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      }
+    }
+  }
+}

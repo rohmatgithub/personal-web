@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 type Theme = "light" | "dark";
 
@@ -9,87 +11,8 @@ type Service = { icon: string; title: string; desc: string; tags: string[] };
 type Project = { title: string; category: string; desc: string; tech: string[]; year: string; overlayClass: string };
 type StatItem = { value: string; label: string };
 
-const NAV_ITEMS: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
-];
-
-const SERVICES: Service[] = [
-  {
-    icon: "◈",
-    title: "Web Application",
-    desc: "Scalable, high-performance web apps built with modern frameworks. From complex SaaS dashboards to customer-facing portals — designed to convert and engineered to scale.",
-    tags: ["Next.js", "React", "TypeScript", "Node.js"],
-  },
-  {
-    icon: "◉",
-    title: "Desktop Application",
-    desc: "Cross-platform desktop solutions that feel native on Windows, macOS, and Linux. Powerful offline capabilities with a polished, intuitive interface.",
-    tags: ["Electron", "Tauri", "WPF", ".NET"],
-  },
-  {
-    icon: "◎",
-    title: "Mobile Application",
-    desc: "Native-quality mobile experiences for iOS and Android. Smooth animations, responsive design, and deep platform integration your users will love.",
-    tags: ["React Native", "Flutter", "Expo"],
-  },
-  {
-    icon: "⬡",
-    title: "UI/UX Design",
-    desc: "Thoughtful design systems and pixel-perfect interfaces that balance beauty with usability. Every interaction is intentional, every detail considered.",
-    tags: ["Figma", "Prototyping", "Design System"],
-  },
-];
-
-const PROJECTS: Project[] = [
-  {
-    title: "Nexora Dashboard",
-    category: "Web Application",
-    desc: "Enterprise analytics dashboard with real-time data visualization, role-based access, and multi-tenant architecture for a SaaS fintech startup.",
-    tech: ["Next.js", "TypeScript", "Prisma", "Recharts"],
-    year: "2024",
-    overlayClass: "project-overlay-1",
-  },
-  {
-    title: "FieldOps Mobile",
-    category: "Mobile Application",
-    desc: "Offline-first field management app for logistics teams. GPS tracking, task assignment, and photo reporting with seamless sync when back online.",
-    tech: ["React Native", "SQLite", "Zustand"],
-    year: "2024",
-    overlayClass: "project-overlay-2",
-  },
-  {
-    title: "Vaultr Desktop",
-    category: "Desktop Application",
-    desc: "Secure local password and secrets manager with end-to-end encryption, auto-fill integration, and a minimal, distraction-free interface.",
-    tech: ["Tauri", "Rust", "React", "SQLCipher"],
-    year: "2023",
-    overlayClass: "project-overlay-3",
-  },
-  {
-    title: "Artisane Storefront",
-    category: "Web Application",
-    desc: "Premium e-commerce platform for a luxury goods brand. Custom CMS, multi-currency checkout, and editorial-style product presentation.",
-    tech: ["Next.js", "Stripe", "Sanity CMS"],
-    year: "2023",
-    overlayClass: "project-overlay-4",
-  },
-];
-
-const STATS: StatItem[] = [
-  { value: "5+", label: "Years Experience" },
-  { value: "40+", label: "Projects Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "3", label: "Platforms Mastered" },
-];
-
-const SKILLS = [
-  "TypeScript", "Next.js", "React", "Node.js",
-  "React Native", "Flutter", "Electron", "Tauri",
-  "PostgreSQL", "Prisma", "Tailwind CSS", "Figma",
-];
+const COPYRIGHT_YEAR = "2026";
+const FOOTER_NAME = "Rohmatullah";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -126,7 +49,9 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Navbar() {
+function Navbar({ items }: { items: NavItem[] }) {
+  const t = useTranslations("MainPage");
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -144,7 +69,7 @@ function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {NAV_ITEMS.map((item) => (
+          {items.map((item) => (
             <li key={item.href}>
               <a href={item.href} className="link-luxury text-sm tracking-wide text-secondary transition-colors duration-200 hover:text-foreground">
                 {item.label}
@@ -156,12 +81,20 @@ function Navbar() {
               href="#contact"
               className="btn-track rounded-full border border-primary bg-transparent px-5 py-2 text-sm text-primary transition-colors duration-200 hover:bg-primary hover:text-primary-contrast"
             >
-              Hire Me
+              {t("nav.hireMe")}
             </a>
+          </li>
+          <li className="flex items-center gap-2 rounded-full border border-border-subtle px-2 py-1">
+            <Link href="/id" className={`px-2 py-0.5 text-xs ${locale === "id" ? "text-primary" : "text-secondary hover:text-foreground"}`}>
+              ID
+            </Link>
+            <Link href="/en" className={`px-2 py-0.5 text-xs ${locale === "en" ? "text-primary" : "text-secondary hover:text-foreground"}`}>
+              EN
+            </Link>
           </li>
         </ul>
 
-        <button onClick={() => setMenuOpen((v) => !v)} className="flex flex-col gap-1.5 p-2 md:hidden" aria-label="Toggle menu">
+        <button onClick={() => setMenuOpen((v) => !v)} className="flex flex-col gap-1.5 p-2 md:hidden" aria-label={t("nav.toggleMenuAria")}>
           <span className="h-px w-5 bg-secondary" />
           <span className="h-px w-5 bg-secondary" />
         </button>
@@ -169,7 +102,7 @@ function Navbar() {
 
       {menuOpen && (
         <div className="border-b border-border-subtle bg-surface-raised px-6 pb-6 pt-2 md:hidden">
-          {NAV_ITEMS.map((item) => (
+          {items.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -180,31 +113,43 @@ function Navbar() {
             </a>
           ))}
           <a href="#contact" className="mt-4 block rounded-full border border-primary py-2.5 text-center text-sm text-primary">
-            Hire Me
+            {t("nav.hireMe")}
           </a>
+          <div className="mt-4 flex gap-3">
+            <Link href="/id" className={`rounded border px-3 py-1 text-xs ${locale === "id" ? "border-primary text-primary" : "border-border-subtle text-secondary"}`}>
+              Indonesia
+            </Link>
+            <Link href="/en" className={`rounded border px-3 py-1 text-xs ${locale === "en" ? "border-primary text-primary" : "border-border-subtle text-secondary"}`}>
+              English
+            </Link>
+          </div>
         </div>
       )}
     </header>
   );
 }
 
-function FloatingThemeSwitch({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => void }) {
+function FloatingThemeSwitch({ onToggleTheme }: { onToggleTheme: () => void }) {
+  const t = useTranslations("MainPage.themeSwitch");
+
   return (
     <button
       type="button"
       onClick={onToggleTheme}
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="fixed right-5 bottom-5 z-[120] inline-flex items-center gap-2 rounded-full border border-border bg-surface-raised px-4 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40"
+      aria-label={t("switchThemeAria")}
+      className="fixed right-5 bottom-5 z-120 inline-flex items-center gap-2 rounded-full border border-border bg-surface-raised px-4 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40"
     >
       <span className="text-base" aria-hidden="true">
-        {theme === "dark" ? "☀️" : "🌙"}
+        🌓
       </span>
-      <span>{theme === "dark" ? "Light" : "Dark"}</span>
+      <span>{t("buttonLabel")}</span>
     </button>
   );
 }
 
-function Hero() {
+function Hero({ stats }: { stats: StatItem[] }) {
+  const t = useTranslations("MainPage.hero");
+
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-surface">
       <div className="pointer-events-none absolute inset-0">
@@ -217,38 +162,36 @@ function Hero() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <div className="animate-fade-in-up" style={{ animationDelay: "0ms" }}>
-              <SectionLabel>Available for Projects</SectionLabel>
+              <SectionLabel>{t("available")}</SectionLabel>
             </div>
 
             <h1 className="hero-title animate-fade-in-up delay-100 mt-2 mb-5 font-display font-bold text-foreground">
-              Crafting Digital
+              {t("titleLine1")}
               <br />
-              <span className="text-gold-gradient">Experiences</span>
+              <span className="text-gold-gradient">{t("titleLine2")}</span>
               <br />
-              That Matter
+              {t("titleLine3")}
             </h1>
 
             <p className="copy-relaxed animate-fade-in-up delay-200 mb-8 max-w-md text-base text-secondary">
-              I&apos;m <strong className="font-medium text-foreground">Rohmatullah</strong> — a full-stack developer specialising in web, desktop, and mobile applications. I turn complex requirements into elegant, high-performance software.
+              {t("introPrefix")} <strong className="font-medium text-foreground">Rohmatullah</strong> {t("introSuffix")}
             </p>
 
             <div className="animate-fade-in-up delay-300 flex flex-wrap gap-3">
-              <a href="#portfolio" className="btn-track inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-contrast shadow-gold transition-colors duration-300 hover:bg-primary-hover">
-                View My Work <span>→</span>
+              <a href="#project" className="btn-track inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-contrast shadow-gold transition-colors duration-300 hover:bg-primary-hover">
+                {t("ctaWork")} <span>→</span>
               </a>
               <a href="#contact" className="btn-track inline-flex items-center gap-2 rounded-full border border-primary/40 px-7 py-3 text-sm font-medium text-secondary transition-colors duration-300 hover:border-primary">
-                Let&apos;s Talk
+                {t("ctaTalk")}
               </a>
             </div>
           </div>
 
           <div className="animate-fade-in-up delay-400">
             <div className="grid grid-cols-2 gap-4">
-              {STATS.map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="rounded-2xl border border-border-subtle bg-surface-raised p-6 backdrop-soft transition-all duration-300 hover:border-primary/40">
-                  <div className="text-primary-gradient mb-1 text-3xl font-display font-bold">
-                    {stat.value}
-                  </div>
+                  <div className="text-primary-gradient mb-1 text-3xl font-display font-bold">{stat.value}</div>
                   <div className="text-xs tracking-wider text-secondary">{stat.label}</div>
                 </div>
               ))}
@@ -256,7 +199,7 @@ function Hero() {
 
             <div className="mt-8 flex items-center gap-3">
               <div className="h-px w-10 bg-primary/40" />
-              <span className="text-xs tracking-widest text-muted">SCROLL TO EXPLORE</span>
+              <span className="text-xs tracking-widest text-muted">{t("scrollHint")}</span>
             </div>
           </div>
         </div>
@@ -265,7 +208,8 @@ function Hero() {
   );
 }
 
-function About() {
+function About({ skills }: { skills: string[] }) {
+  const t = useTranslations("MainPage.about");
   const { ref, inView } = useInView();
 
   return (
@@ -279,7 +223,7 @@ function About() {
                 <div className="absolute inset-4 flex flex-col items-center justify-center gap-4 rounded-2xl bg-linear-to-br from-inverse to-surface">
                   <div className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary/30 bg-primary-subtle text-4xl">R</div>
                   <p className="text-sm tracking-widest text-primary">ROHMATULLAH</p>
-                  <p className="text-xs text-muted">Full-Stack Developer</p>
+                  <p className="text-xs text-muted">{t("role")}</p>
                 </div>
               </div>
               <div className="absolute -bottom-3 -right-3 h-16 w-16 rounded-2xl bg-linear-to-br from-gold to-gold-deep opacity-80" />
@@ -287,21 +231,17 @@ function About() {
           </div>
 
           <div>
-            <SectionLabel>About Me</SectionLabel>
+            <SectionLabel>{t("sectionLabel")}</SectionLabel>
             <h2 className="section-title mb-5 font-display font-bold text-foreground">
-              Precision-built software for
+              {t("titleLine1")}
               <br />
-              <span className="text-gold-gradient">discerning clients</span>
+              <span className="text-gold-gradient">{t("titleLine2")}</span>
             </h2>
-            <p className="copy-roomy mb-4 text-secondary">
-              With over 5 years of hands-on experience, I specialise in building software that&apos;s not just functional — but exceptional. I work closely with clients to understand the business context behind every feature, ensuring the end result is always purposeful.
-            </p>
-            <p className="copy-roomy mb-8 text-secondary">
-              My practice spans the full stack: from database architecture to pixel-perfect interfaces. Whether it&apos;s a complex enterprise web app, a cross-platform desktop tool, or a polished mobile experience, I bring the same level of craftsmanship to every project.
-            </p>
+            <p className="copy-roomy mb-4 text-secondary">{t("paragraph1")}</p>
+            <p className="copy-roomy mb-8 text-secondary">{t("paragraph2")}</p>
 
             <div className="flex flex-wrap gap-2">
-              {SKILLS.map((skill) => (
+              {skills.map((skill) => (
                 <span key={skill} className="rounded-full border border-primary/25 bg-primary-subtle px-3 py-1 text-xs tracking-wide text-primary">
                   {skill}
                 </span>
@@ -314,7 +254,8 @@ function About() {
   );
 }
 
-function Services() {
+function Services({ services }: { services: Service[] }) {
+  const t = useTranslations("MainPage.services");
   const { ref, inView } = useInView();
 
   return (
@@ -322,16 +263,16 @@ function Services() {
       <div className="mx-auto max-w-6xl px-6">
         <div ref={ref} className={`transition-all duration-700 ${inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="mb-14 max-w-xl">
-            <SectionLabel>What I Do</SectionLabel>
+            <SectionLabel>{t("sectionLabel")}</SectionLabel>
             <h2 className="section-title font-display font-bold text-foreground">
-              Services built around
+              {t("titleLine1")}
               <br />
-              your vision
+              {t("titleLine2")}
             </h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {SERVICES.map((svc, i) => (
+            {services.map((svc, i) => (
               <div
                 key={svc.title}
                 className="card-luxury group cursor-default rounded-2xl border border-border-subtle bg-background p-7 transition-all duration-300 hover:border-primary/40"
@@ -356,28 +297,31 @@ function Services() {
   );
 }
 
-function Portfolio() {
+function Portfolio({ projects }: { projects: Project[] }) {
+  const t = useTranslations("MainPage.portfolio");
   const { ref, inView } = useInView();
 
   return (
-    <section id="portfolio" className="relative bg-background py-28">
+    <section id="project" className="relative bg-background py-28">
+      <div id="portfolio" className="sr-only" aria-hidden="true" />
       <div className="mx-auto max-w-6xl px-6">
         <div ref={ref} className={`transition-all duration-700 ${inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <SectionLabel>Selected Work</SectionLabel>
+              <SectionLabel>{t("sectionLabel")}</SectionLabel>
               <h2 className="section-title font-display font-bold text-foreground">
-                Projects I&apos;m
-                <br />proud of
+                {t("titleLine1")}
+                <br />
+                {t("titleLine2")}
               </h2>
             </div>
             <a href="#contact" className="self-start text-sm text-link underline decoration-primary/30 underline-offset-4 md:self-auto">
-              Start a new project →
+              {t("startProject")} →
             </a>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {PROJECTS.map((proj, i) => (
+            {projects.map((proj, i) => (
               <div
                 key={proj.title}
                 className="card-luxury group relative cursor-pointer overflow-hidden rounded-2xl border border-border-subtle bg-surface-raised p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
@@ -394,9 +338,9 @@ function Portfolio() {
                   <p className="copy-relaxed mb-5 text-sm text-secondary">{proj.desc}</p>
 
                   <div className="flex flex-wrap gap-1.5">
-                    {proj.tech.map((t) => (
-                      <span key={t} className="rounded bg-subtle px-2 py-0.5 text-xs text-secondary">
-                        {t}
+                    {proj.tech.map((tech) => (
+                      <span key={tech} className="rounded bg-subtle px-2 py-0.5 text-xs text-secondary">
+                        {tech}
                       </span>
                     ))}
                   </div>
@@ -411,9 +355,16 @@ function Portfolio() {
 }
 
 function Contact() {
+  const t = useTranslations("MainPage.contact");
   const { ref, inView } = useInView();
   const [form, setForm] = useState({ name: "", email: "", project: "", message: "" });
   const [sent, setSent] = useState(false);
+
+  const contactItems = [
+    { icon: "✉", label: t("items.emailLabel"), value: "rohmat@example.com" },
+    { icon: "💼", label: t("items.linkedinLabel"), value: "linkedin.com/in/rohmat" },
+    { icon: "🐙", label: t("items.githubLabel"), value: "github.com/rohmat" },
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -427,20 +378,20 @@ function Contact() {
       <div className="mx-auto max-w-5xl px-6">
         <div ref={ref} className={`transition-all duration-700 ${inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="mb-14 max-w-lg">
-            <SectionLabel>Get In Touch</SectionLabel>
+            <SectionLabel>{t("sectionLabel")}</SectionLabel>
             <h2 className="section-title mb-4 font-display font-bold text-foreground">
-              Ready to build something
+              {t("titleLine1")}
               <br />
-              <span className="text-gold-gradient">remarkable?</span>
+              <span className="text-gold-gradient">{t("titleLine2")}</span>
             </h2>
-            <p className="copy-relaxed text-secondary">Tell me about your project. I&apos;ll get back to you within 24 hours.</p>
+            <p className="copy-relaxed text-secondary">{t("subtitle")}</p>
           </div>
 
           <div className="grid items-start gap-12 md:grid-cols-5">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:col-span-3">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
-                  placeholder="Your name"
+                  placeholder={t("form.namePlaceholder")}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
@@ -448,7 +399,7 @@ function Contact() {
                 />
                 <input
                   type="email"
-                  placeholder="Email address"
+                  placeholder={t("form.emailPlaceholder")}
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
@@ -457,14 +408,14 @@ function Contact() {
               </div>
 
               <input
-                placeholder="Project type (Web / Desktop / Mobile)"
+                placeholder={t("form.projectPlaceholder")}
                 value={form.project}
                 onChange={(e) => setForm({ ...form, project: e.target.value })}
                 className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-focus"
               />
 
               <textarea
-                placeholder="Tell me about your project, goals, and timeline…"
+                placeholder={t("form.messagePlaceholder")}
                 rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -476,16 +427,12 @@ function Contact() {
                 type="submit"
                 className={`btn-track mt-1 self-start rounded-full px-8 py-3 text-sm font-medium text-primary-contrast shadow-gold transition-colors duration-300 ${sent ? "bg-success" : "bg-primary hover:bg-primary-hover"}`}
               >
-                {sent ? "Message Sent ✓" : "Send Message →"}
+                {sent ? t("form.sentButton") : t("form.sendButton")}
               </button>
             </form>
 
             <div className="flex flex-col gap-6 pt-2 md:col-span-2">
-              {[
-                { icon: "✉", label: "Email", value: "rohmat@example.com" },
-                { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/rohmat" },
-                { icon: "🐙", label: "GitHub", value: "github.com/rohmat" },
-              ].map((item) => (
+              {contactItems.map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary-subtle text-sm">
                     {item.icon}
@@ -498,8 +445,8 @@ function Contact() {
               ))}
 
               <div className="mt-4 rounded-xl border border-primary/20 bg-primary-subtle p-4">
-                <div className="mb-1 text-xs font-semibold tracking-wider text-primary">● AVAILABLE</div>
-                <p className="copy-compact text-xs text-secondary">Currently accepting new projects. Typical response time within 24 hours.</p>
+                <div className="mb-1 text-xs font-semibold tracking-wider text-primary">● {t("availabilityLabel")}</div>
+                <p className="copy-compact text-xs text-secondary">{t("availabilityDesc")}</p>
               </div>
             </div>
           </div>
@@ -510,15 +457,17 @@ function Contact() {
 }
 
 function Footer() {
+  const t = useTranslations("MainPage.footer");
+
   return (
     <footer className="border-t border-border-subtle bg-surface py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
         <span className="font-display text-primary">Rohmat.</span>
-        <p className="text-xs text-secondary">© {new Date().getFullYear()} Rohmatullah. Crafted with care.</p>
+        <p className="text-xs text-secondary">© {COPYRIGHT_YEAR} {FOOTER_NAME}. {t("craftedWithCare")}</p>
         <div className="flex gap-5">
-          {["GitHub", "LinkedIn", "Twitter"].map((s) => (
-            <a key={s} href="#" className="text-xs text-secondary transition-colors duration-200 hover:text-primary">
-              {s}
+          {[t("social.github"), t("social.linkedin"), t("social.twitter")].map((social) => (
+            <a key={social} href="#" className="text-xs text-secondary transition-colors duration-200 hover:text-primary">
+              {social}
             </a>
           ))}
         </div>
@@ -527,7 +476,8 @@ function Footer() {
   );
 }
 
-export default function HomePage() {
+export default function HomePageClient() {
+  const t = useTranslations("MainPage");
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === "undefined") return "dark";
     const saved = localStorage.getItem("portfolio-theme");
@@ -540,21 +490,103 @@ export default function HomePage() {
     localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
+  const navItems: NavItem[] = [
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.work"), href: "#project" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
+
+  const stats: StatItem[] = [
+    { value: "5+", label: t("hero.stats.experience") },
+    { value: "40+", label: t("hero.stats.projects") },
+    { value: "98%", label: t("hero.stats.satisfaction") },
+    { value: "3", label: t("hero.stats.platforms") },
+  ];
+
+  const skills = [
+    "TypeScript", "Next.js", "React", "Node.js",
+    "React Native", "Flutter", "Electron", "Tauri",
+    "PostgreSQL", "Prisma", "Tailwind CSS", "Figma",
+  ];
+
+  const services: Service[] = [
+    {
+      icon: "◈",
+      title: t("services.items.web.title"),
+      desc: t("services.items.web.desc"),
+      tags: ["Next.js", "React", "TypeScript", "Node.js"],
+    },
+    {
+      icon: "◉",
+      title: t("services.items.desktop.title"),
+      desc: t("services.items.desktop.desc"),
+      tags: ["Electron", "Tauri", "WPF", ".NET"],
+    },
+    {
+      icon: "◎",
+      title: t("services.items.mobile.title"),
+      desc: t("services.items.mobile.desc"),
+      tags: ["React Native", "Flutter", "Expo"],
+    },
+    {
+      icon: "⬡",
+      title: t("services.items.uiux.title"),
+      desc: t("services.items.uiux.desc"),
+      tags: ["Figma", "Prototyping", "Design System"],
+    },
+  ];
+
+  const projects: Project[] = [
+    {
+      title: t("portfolio.items.nexora.title"),
+      category: t("portfolio.items.nexora.category"),
+      desc: t("portfolio.items.nexora.desc"),
+      tech: ["Next.js", "TypeScript", "Prisma", "Recharts"],
+      year: "2024",
+      overlayClass: "project-overlay-1",
+    },
+    {
+      title: t("portfolio.items.fieldops.title"),
+      category: t("portfolio.items.fieldops.category"),
+      desc: t("portfolio.items.fieldops.desc"),
+      tech: ["React Native", "SQLite", "Zustand"],
+      year: "2024",
+      overlayClass: "project-overlay-2",
+    },
+    {
+      title: t("portfolio.items.vaultr.title"),
+      category: t("portfolio.items.vaultr.category"),
+      desc: t("portfolio.items.vaultr.desc"),
+      tech: ["Tauri", "Rust", "React", "SQLCipher"],
+      year: "2023",
+      overlayClass: "project-overlay-3",
+    },
+    {
+      title: t("portfolio.items.artisane.title"),
+      category: t("portfolio.items.artisane.category"),
+      desc: t("portfolio.items.artisane.desc"),
+      tech: ["Next.js", "Stripe", "Sanity CMS"],
+      year: "2023",
+      overlayClass: "project-overlay-4",
+    },
+  ];
+
   return (
     <>
-      <Navbar />
+      <Navbar items={navItems} />
       <main>
-        <Hero />
+        <Hero stats={stats} />
         <GoldDivider />
-        <About />
+        <About skills={skills} />
         <GoldDivider />
-        <Services />
+        <Services services={services} />
         <GoldDivider />
-        <Portfolio />
+        <Portfolio projects={projects} />
         <GoldDivider />
         <Contact />
       </main>
-      <FloatingThemeSwitch theme={theme} onToggleTheme={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))} />
+      <FloatingThemeSwitch onToggleTheme={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))} />
       <Footer />
     </>
   );
