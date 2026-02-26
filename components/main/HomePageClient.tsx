@@ -8,7 +8,7 @@ type Theme = "light" | "dark";
 
 type NavItem = { label: string; href: string };
 type Service = { icon: string; title: string; desc: string; tags: string[] };
-type Project = { title: string; category: string; desc: string; tech: string[]; year: string; overlayClass: string };
+type Project = { title: string; category: string; desc: string; tech: string[]; year: string; overlayClass: string; href: string };
 type StatItem = { value: string; label: string };
 
 const COPYRIGHT_YEAR = "2026";
@@ -322,8 +322,9 @@ function Portfolio({ projects }: { projects: Project[] }) {
 
           <div className="grid gap-5 md:grid-cols-2">
             {projects.map((proj, i) => (
-              <div
+              <Link
                 key={proj.title}
+                href={proj.href}
                 className="card-luxury group relative cursor-pointer overflow-hidden rounded-2xl border border-border-subtle bg-surface-raised p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
@@ -344,8 +345,11 @@ function Portfolio({ projects }: { projects: Project[] }) {
                       </span>
                     ))}
                   </div>
+                  <div className="mt-5 text-xs font-semibold tracking-wide text-primary">
+                    {t("openProject")} →
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -539,36 +543,40 @@ export default function HomePageClient() {
 
   const projects: Project[] = [
     {
-      title: t("portfolio.items.nexora.title"),
-      category: t("portfolio.items.nexora.category"),
-      desc: t("portfolio.items.nexora.desc"),
-      tech: ["Next.js", "TypeScript", "Prisma", "Recharts"],
-      year: "2024",
+      title: t("portfolio.items.fhiProfile.title"),
+      category: t("portfolio.items.fhiProfile.category"),
+      desc: t("portfolio.items.fhiProfile.desc"),
+      tech: ["Next.js", "TypeScript", "CMS", "SEO"],
+      year: "2026",
       overlayClass: "project-overlay-1",
+      href: "/project/fhi",
     },
     {
-      title: t("portfolio.items.fieldops.title"),
-      category: t("portfolio.items.fieldops.category"),
-      desc: t("portfolio.items.fieldops.desc"),
-      tech: ["React Native", "SQLite", "Zustand"],
-      year: "2024",
+      title: t("portfolio.items.fhiMatchCenter.title"),
+      category: t("portfolio.items.fhiMatchCenter.category"),
+      desc: t("portfolio.items.fhiMatchCenter.desc"),
+      tech: ["Next.js", "Realtime Score", "Standings", "API"],
+      year: "2026",
       overlayClass: "project-overlay-2",
+      href: "/project/fhi/match-center",
     },
     {
-      title: t("portfolio.items.vaultr.title"),
-      category: t("portfolio.items.vaultr.category"),
-      desc: t("portfolio.items.vaultr.desc"),
-      tech: ["Tauri", "Rust", "React", "SQLCipher"],
-      year: "2023",
+      title: t("portfolio.items.fhiBlog.title"),
+      category: t("portfolio.items.fhiBlog.category"),
+      desc: t("portfolio.items.fhiBlog.desc"),
+      tech: ["Editorial CMS", "Slug Routing", "Responsive UI"],
+      year: "2026",
       overlayClass: "project-overlay-3",
+      href: "/project/fhi/blog",
     },
     {
-      title: t("portfolio.items.artisane.title"),
-      category: t("portfolio.items.artisane.category"),
-      desc: t("portfolio.items.artisane.desc"),
-      tech: ["Next.js", "Stripe", "Sanity CMS"],
-      year: "2023",
+      title: t("portfolio.items.fhiProposal.title"),
+      category: t("portfolio.items.fhiProposal.category"),
+      desc: t("portfolio.items.fhiProposal.desc"),
+      tech: ["UI Concept", "Offer Deck", "Interactive Preview"],
+      year: "2026",
       overlayClass: "project-overlay-4",
+      href: "/proposal/fhi",
     },
   ];
 

@@ -547,7 +547,7 @@ export default function BlogDetailPage({ slug }: { slug: string }) {
             href="/project/fhi"
             className="flex items-center gap-2 font-bold text-white/70 no-underline transition-colors duration-200 hover:text-white"
           >
-            <span>🏒</span> FHI - {t("detail.footerBrand")}
+            <span>🏑</span> FHI - {t("detail.footerBrand")}
           </Link>
           <span className="text-[13px]">{t("detail.footerCopyright")}</span>
           <div className="flex gap-4">

@@ -66,27 +66,28 @@
       "titleLine2": "saya banggakan",
       "startProject": "Mulai proyek baru",
       "items": {
-        "nexora": {
-          "title": "Nexora Dashboard",
+        "fhiProfile": {
+          "title": "Website Profil Resmi FHI",
           "category": "Aplikasi Web",
-          "desc": "Dashboard analitik enterprise dengan visualisasi data real-time, kontrol akses berbasis peran, dan arsitektur multi-tenant untuk startup fintech SaaS."
+          "desc": "Website profil organisasi resmi Federasi Hockey Indonesia dengan struktur informasi, branding, dan pusat informasi publik."
         },
-        "fieldops": {
-          "title": "FieldOps Mobile",
-          "category": "Aplikasi Mobile",
-          "desc": "Aplikasi manajemen lapangan offline-first untuk tim logistik. Pelacakan GPS, penugasan, dan laporan foto dengan sinkronisasi mulus saat kembali online."
+        "fhiMatchCenter": {
+          "title": "FHI Match Center",
+          "category": "Platform Turnamen",
+          "desc": "Match center live untuk jadwal, hasil, klasemen, dan status pertandingan turnamen secara real-time untuk publik."
         },
-        "vaultr": {
-          "title": "Vaultr Desktop",
-          "category": "Aplikasi Desktop",
-          "desc": "Password dan secrets manager lokal yang aman dengan enkripsi end-to-end, integrasi auto-fill, dan antarmuka minimalis tanpa distraksi."
+        "fhiBlog": {
+          "title": "FHI Blog & News CMS",
+          "category": "Manajemen Konten",
+          "desc": "Modul manajemen berita dan artikel untuk publikasi update resmi, pengumuman, dan aktivitas federasi."
         },
-        "artisane": {
-          "title": "Artisane Storefront",
-          "category": "Aplikasi Web",
-          "desc": "Platform e-commerce premium untuk brand barang mewah. CMS kustom, checkout multi-mata uang, dan presentasi produk bergaya editorial."
+        "fhiProposal": {
+          "title": "FHI Proposal Showcase",
+          "category": "Halaman Proposal",
+          "desc": "Halaman proposal interaktif untuk menampilkan ruang lingkup, timeline, dan preview konsep visual ke stakeholder."
         }
-      }
+      },
+      "openProject": "Buka proyek"
     },
     "contact": {
       "sectionLabel": "Mari Terhubung",

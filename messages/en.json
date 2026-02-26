@@ -66,27 +66,28 @@
       "titleLine2": "proud of",
       "startProject": "Start a new project",
       "items": {
-        "nexora": {
-          "title": "Nexora Dashboard",
+        "fhiProfile": {
+          "title": "FHI Official Company Profile",
           "category": "Web Application",
-          "desc": "Enterprise analytics dashboard with real-time data visualization, role-based access, and multi-tenant architecture for a SaaS fintech startup."
+          "desc": "Official organizational profile website for Federasi Hockey Indonesia with structured sections, branding, and public information hub."
         },
-        "fieldops": {
-          "title": "FieldOps Mobile",
-          "category": "Mobile Application",
-          "desc": "Offline-first field management app for logistics teams. GPS tracking, task assignment, and photo reporting with seamless sync when back online."
+        "fhiMatchCenter": {
+          "title": "FHI Match Center",
+          "category": "Tournament Platform",
+          "desc": "Live match center for tournament schedules, results, standings, and real-time match status for public viewers."
         },
-        "vaultr": {
-          "title": "Vaultr Desktop",
-          "category": "Desktop Application",
-          "desc": "Secure local password and secrets manager with end-to-end encryption, auto-fill integration, and a minimal, distraction-free interface."
+        "fhiBlog": {
+          "title": "FHI Blog & News CMS",
+          "category": "Content Management",
+          "desc": "News and article management module for publishing official updates, announcements, and federation activities."
         },
-        "artisane": {
-          "title": "Artisane Storefront",
-          "category": "Web Application",
-          "desc": "Premium e-commerce platform for a luxury goods brand. Custom CMS, multi-currency checkout, and editorial-style product presentation."
+        "fhiProposal": {
+          "title": "FHI Proposal Showcase",
+          "category": "Proposal Experience",
+          "desc": "Interactive proposal page that presents scope, timeline, and visual concept previews for stakeholders."
         }
-      }
+      },
+      "openProject": "Open project"
     },
     "contact": {
       "sectionLabel": "Get In Touch",
