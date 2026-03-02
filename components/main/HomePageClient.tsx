@@ -13,6 +13,8 @@ type StatItem = { value: string; label: string };
 
 const COPYRIGHT_YEAR = "2026";
 const FOOTER_NAME = "Rohmatullah";
+const LINKEDIN_URL = "https://www.linkedin.com/in/rohmatullah";
+const GITHUB_URL = "https://github.com/rohmatgithub";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -365,9 +367,9 @@ function Contact() {
   const [sent, setSent] = useState(false);
 
   const contactItems = [
-    { icon: "✉", label: t("items.emailLabel"), value: "rohmat@example.com" },
-    { icon: "💼", label: t("items.linkedinLabel"), value: "linkedin.com/in/rohmat" },
-    { icon: "🐙", label: t("items.githubLabel"), value: "github.com/rohmat" },
+    { icon: "✉", label: t("items.emailLabel"), value: "rohmattullah990@gmail.com" },
+    { icon: "💼", label: t("items.linkedinLabel"), value: "linkedin.com/in/rohmatullah", href: LINKEDIN_URL },
+    { icon: "🐙", label: t("items.githubLabel"), value: "github.com/rohmatgithub", href: GITHUB_URL },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -443,7 +445,18 @@ function Contact() {
                   </div>
                   <div>
                     <div className="mb-0.5 text-xs tracking-wider text-muted">{item.label}</div>
-                    <div className="text-sm text-foreground">{item.value}</div>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-foreground underline decoration-primary/30 underline-offset-4 hover:text-primary"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="text-sm text-foreground">{item.value}</div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -462,6 +475,11 @@ function Contact() {
 
 function Footer() {
   const t = useTranslations("MainPage.footer");
+  const socialLinks = [
+    { label: t("social.github"), href: GITHUB_URL },
+    { label: t("social.linkedin"), href: LINKEDIN_URL },
+    { label: t("social.twitter"), href: "#" },
+  ];
 
   return (
     <footer className="border-t border-border-subtle bg-surface py-8">
@@ -469,9 +487,15 @@ function Footer() {
         <span className="font-display text-primary">Rohmat.</span>
         <p className="text-xs text-secondary">© {COPYRIGHT_YEAR} {FOOTER_NAME}. {t("craftedWithCare")}</p>
         <div className="flex gap-5">
-          {[t("social.github"), t("social.linkedin"), t("social.twitter")].map((social) => (
-            <a key={social} href="#" className="text-xs text-secondary transition-colors duration-200 hover:text-primary">
-              {social}
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target={social.href.startsWith("http") ? "_blank" : undefined}
+              rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="text-xs text-secondary transition-colors duration-200 hover:text-primary"
+            >
+              {social.label}
             </a>
           ))}
         </div>
